@@ -1,0 +1,66 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShoUs Quiz App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>🎯 ShoUs Quiz App 🎯</h1>
+
+    <!-- Login / Signup -->
+    <div id="auth-container">
+    <h2>Login</h2>
+    <input type="text" id="login-username" placeholder="Username">
+    <input type="password" id="login-password" placeholder="Password">
+    <button onclick="login()">Login</button>
+
+    <h2>Signup</h2>
+    <input type="text" id="signup-username" placeholder="Username">
+    <input type="password" id="signup-password" placeholder="Password">
+    <button onclick="signup()">Signup</button>
+
+    <p id="auth-message"></p>
+</div>
+
+    <!-- Category Selection -->
+    <div id="category-selection" style="display:none;">
+        <h2>Select Category:</h2>
+        <button onclick="startQuiz('Core Java')">Core Java</button>
+        <button onclick="startQuiz('Advanced Java')">Advanced Java</button>
+        <button onclick="startQuiz('Aptitude')">Aptitude</button>
+    </div>
+
+    <!-- Quiz Container -->
+    <div id="quiz-container" style="display:none;">
+        <h2 id="quiz-category"></h2>
+        <div id="question-box"></div>
+        <div id="options-box"></div>
+        <button id="prev-btn" onclick="previousQuestion()" style="display:none;">Previous</button>
+        <button id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- Result Container -->
+    <div id="result-container" style="display:none;">
+        <h2>Quiz Completed!</h2>
+        <p id="score-text"></p>
+        <button onclick="restartQuiz()">Play Again</button>
+        <button onclick="viewScoreboard()">View Scoreboard</button>
+    </div>
+
+    <!-- Scoreboard -->
+    <div id="scoreboard-container" style="display:none;">
+        <h2>🏆 Scoreboard</h2>
+        <ul id="scoreboard-list"></ul>
+        <button onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
